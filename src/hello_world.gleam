@@ -1,5 +1,9 @@
-import gleam/io
+import gleam/io.{println}
+import gleam/string.{compare, lowercase}
+import gleam/order.{Eq}
 
 pub fn main() {
-  io.println("Hello from hello_world!")
+  println("Hello world!")
+
+  io.debug(compare("test", lowercase("Test")) == Eq)
 }
